@@ -3,16 +3,16 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// MENU STATE
+// MENU SCENE
 var scenes;
 (function (scenes) {
     var Menu = (function (_super) {
         __extends(Menu, _super);
-        // CONSTRUCTOR
+        // CONSTRUCTOR ++++++++++++++++++++++
         function Menu() {
             _super.call(this);
         }
-        // PUBLIC METHODS+++++++++++++++++++++++
+        // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Menu.prototype.start = function () {
             console.log("Game Started...");
@@ -22,16 +22,16 @@ var scenes;
             this._helloLabel.x = config.Screen.CENTER_X;
             this._helloLabel.y = config.Screen.CENTER_Y;
             this.addChild(this._helloLabel);
-            this._startButton = new objects.Button("Start Button", config.Screen.CENTER_X, config.Screen.CENTER_Y + 60);
+            this._startButton = new objects.Button("StartButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 80);
             this.addChild(this._startButton);
             // startbutton event listener
             this._startButton.on("click", this._startButtonClick, this);
             stage.addChild(this);
         };
+        // Menu Scene updates here
         Menu.prototype.update = function () {
-            //this._helloLabel.rotation += 5;
         };
-        // EVENT HANDLER
+        //EVENT HANDLERS ++++++++++++++++++++
         Menu.prototype._startButtonClick = function (event) {
             this._helloLabel.text = "Game Started";
         };

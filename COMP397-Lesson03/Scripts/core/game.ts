@@ -4,7 +4,8 @@
 // global variables
 var canvas: HTMLElement;
 var stage: createjs.Stage;
-var menu: scenes.Menu
+
+var menu: scenes.Menu;
 
 function init(): void {
     // create a reference the HTML canvas Element
@@ -12,6 +13,9 @@ function init(): void {
     
     // create our main display list container
     stage = new createjs.Stage(canvas);
+    
+    // Enable mouse events
+    stage.enableMouseOver(20);
     
     // set the framerate to 60 frames per second
     createjs.Ticker.setFPS(config.Game.FPS);

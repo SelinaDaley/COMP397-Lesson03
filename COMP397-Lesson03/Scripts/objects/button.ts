@@ -4,10 +4,10 @@
         width: number;
         height: number;
         //CONSTRUCTOR
-        constructor(pathString:string, x:number, y: number) {
+        constructor(pathString: string, x: number, y: number) {
             super("../../Assets/images/" + pathString + ".png");
             this.x = x;
-            this.y = y; 
+            this.y = y;
 
             this.width = 150;
             this.height = 50;

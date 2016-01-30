@@ -8,6 +8,8 @@ function init() {
     canvas = document.getElementById("canvas");
     // create our main display list container
     stage = new createjs.Stage(canvas);
+    // Enable mouse events
+    stage.enableMouseOver(20);
     // set the framerate to 60 frames per second
     createjs.Ticker.setFPS(config.Game.FPS);
     // create an event listener to count off frames
