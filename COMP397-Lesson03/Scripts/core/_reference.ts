@@ -6,4 +6,4 @@
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/scene.ts" />
 
-/// <reference path="../scenes/menu.ts" />
+/// <reference path="../scene/menu.ts" />
